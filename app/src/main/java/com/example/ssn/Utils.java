@@ -1,47 +1,35 @@
 package com.example.ssn;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Utils {
-    static String fbKey = "EAAFa7O0P5AkBAHVDs5siDoHToBXB8cmsSUePwchB42DzlD2wCVVzADv2Hs8EsLzONIhbVAUgiOVWUrl4M0UZCmZCNAv0J5LTNfZARUZCBQeRkEP4VogaZBP4piblwloUqavIhmokz20YpKZAqvKyTU7sCWfZAfDpz9ZBuanXsAkobwIgis4i09sHzwsYMvna3XHJhqvWgeDSbQZDZD";
 
-    public static ProductBatch getProducts(String filename){
-        //TODO generate or fetch from file
-        return new ProductBatch();
+    public static List<Product> getProductTypes(){
+
+        List<Product> prods = new ArrayList<>();
+        prods.add(new Product("Baguette", new Random().nextInt()));
+        prods.add(new Product("Flat Bread", new Random().nextInt()));
+        prods.add( new Product("Brioche", new Random().nextInt()));
+        prods.add(new Product("Polenta", new Random().nextInt()));
+        prods.add(new Product("panini", new Random().nextInt()));
+
+        return prods;
     }
 
 
-    public static void PostFacebookRequest(String Message){
+    public static List<ProductBatch> getProductBatches(){
+        List<ProductBatch> batches = new ArrayList<>();
 
-        try {
-            URL url = new URL("https://graph.facebook.com/104577460953350/feed");
-
-            HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("POST");
-            try {
-                urlConnection.getHeaderField("Authorization");
-                urlConnection.addRequestProperty("Authorization", fbKey);
-                urlConnection.getResponseCode();
-
-                InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                System.out.println(in);
-
-            } finally {
-                urlConnection.disconnect();
+        for(int i=0;i<3; i++){
+            for(Product p : getProductTypes()){
+                batches.add(new ProductBatch(p, (new Random()).nextInt(15)));
             }
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
+        return batches;
     }
+
 
 }
