@@ -12,7 +12,6 @@
         android:layout_width="0dp"
         android:layout_height="59dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -25,10 +24,17 @@
         app:layout_constraintVertical_bias="0.072" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="608dp"
-        android:layout_height="222dp"
+        android:id="@+id/ProductRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0.535" />
 </androidx.constraintlayout.widget.ConstraintLayout>
