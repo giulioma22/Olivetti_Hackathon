@@ -9,5 +9,4 @@ public class Repository {
 
     public static Map<Timestamp,ProductBatch> BatchMap = new HashMap<>();
 
-
 }
