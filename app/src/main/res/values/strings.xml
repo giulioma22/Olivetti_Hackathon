@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">SSN</string>
+    <string name="app_name">SSF</string>
+    <string name="fbDefaultPostMessage">Hey come and discover our awesome discounts here at</string>
 </resources>
