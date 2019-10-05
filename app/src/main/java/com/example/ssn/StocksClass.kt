@@ -10,9 +10,17 @@ class StocksClass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stocks_class)
 
+        val list_of_products = listOf(
+            ProductClass("Bread", "Today"),
+            ProductClass("Banana", "Tomorrow"),
+            ProductClass("Tomato", "07 October 2019"),
+            ProductClass("Tomato", "07 October 2019")
+
+        )
+
         ProductRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@StocksClass)
-            adapter = ProductAdapter()
+            adapter = ProductAdapter(list_of_products)
         }
     }
 }
