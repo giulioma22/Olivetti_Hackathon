@@ -14,6 +14,7 @@ public class ProductBatch {
         this.prodType = product;
         this.shelf_life = shelf_life;
         this.batchId = new Random().nextInt(10000);
+        Repository.BatchMap.put(shelf_life, this);
     }
 
 
@@ -28,5 +29,6 @@ public class ProductBatch {
      */
     public ProductBatch(Product product, int size){
         this.shelf_life = new Timestamp(System.currentTimeMillis()+10^3*3600);
+        Repository.BatchMap.put(shelf_life, this);
     }
 }
