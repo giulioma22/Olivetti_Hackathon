@@ -13,7 +13,7 @@ public class Utils {
         prods.add(new Product("Flat Bread", new Random().nextInt()));
         prods.add( new Product("Brioche", new Random().nextInt()));
         prods.add(new Product("Polenta", new Random().nextInt()));
-        prods.add(new Product("panini", new Random().nextInt()));
+        prods.add(new Product("Panini", new Random().nextInt()));
 
         return prods;
     }
