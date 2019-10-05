@@ -6,15 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="1819dp"
-        android:layout_height="1022dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <Button
+        android:id="@+id/DoSomething"
+        android:layout_width="321dp"
+        android:layout_height="126dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="142dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@ public class Utils {
     static String fbKey = "EAAFa7O0P5AkBAHVDs5siDoHToBXB8cmsSUePwchB42DzlD2wCVVzADv2Hs8EsLzONIhbVAUgiOVWUrl4M0UZCmZCNAv0J5LTNfZARUZCBQeRkEP4VogaZBP4piblwloUqavIhmokz20YpKZAqvKyTU7sCWfZAfDpz9ZBuanXsAkobwIgis4i09sHzwsYMvna3XHJhqvWgeDSbQZDZD";
 
     public static ProductBatch getProducts(String filename){
-        //TODO genrate or fetch from file
+        //TODO generate or fetch from file
         return new ProductBatch();
     }
 
