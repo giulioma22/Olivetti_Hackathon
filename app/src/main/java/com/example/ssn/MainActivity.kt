@@ -12,9 +12,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        DoSomething.setOnClickListener {
-            d("olivetti","Do something!")
-            startActivity(Intent(this, AboutMe::class.java))
+        StocksButton.setOnClickListener {
+            d("Stocks","StockButton pressed!")
+            startActivity(Intent(this, StocksClass::class.java))
+        }
+        StatisicsButton.setOnClickListener {
+            d("Statistics","StatisticsButton pressed!")
+            startActivity(Intent(this, StatsClass::class.java))
         }
     }
 }

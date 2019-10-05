@@ -7,10 +7,34 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/DoSomething"
-        android:layout_width="321dp"
-        android:layout_height="126dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="142dp" />
+        android:id="@+id/StocksButton"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#F44336"
+        android:text="Stocks that need attention"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/StatisicsButton"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#FFEB3B"
+        android:text="Statistics and Forecast"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundTint="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="361dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
